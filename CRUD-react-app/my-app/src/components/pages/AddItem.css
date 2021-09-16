@@ -1,0 +1,30 @@
+.container {
+  /* background:grey; */
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+}
+
+.input-container h1 {
+  margin-left: 50px;
+}
+
+input {
+  height: 50px;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+button {
+  height: 50px;
+  margin: 10px;
+  margin-top: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
