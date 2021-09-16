@@ -8,6 +8,7 @@ function App() {
   const dispatch = useDispatch();
 
   const  {depositMoney, withdrawMoney } = bindActionCreators(actionCreators, dispatch)
+  
   return (
     <div className="container">
       <div className="App">
