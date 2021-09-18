@@ -1,0 +1,8 @@
+npm install axios (for making API requests)
+            moment (library for time and dates)
+            react-file-base64 (used for converting images)
+            redux
+            redux-thunk
+            react-redux
+            @material-ui/core
+            @material-ui/icons
