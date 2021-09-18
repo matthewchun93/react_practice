@@ -6,3 +6,7 @@ npm install axios (for making API requests)
             react-redux
             @material-ui/core
             @material-ui/icons
+
+npm install axios moment react-file-base64 redux redux-thunk react-redux @material-ui/core @material-ui/icons
+
+-add proxy to server port
