@@ -1,0 +1,8 @@
+npm install body-parser (enables post requests)
+            cors (enables cross origin requests)
+            express (framework for routing)
+            mongoose (create models for posts)
+            nodemon (run server for us)
+            dotenv
+
+npm install cors express mongoose nodemon dotenv    

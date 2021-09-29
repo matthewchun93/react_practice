@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-// require('dotenv/config');
+import 'dotenv/config';
 import postRoutes from './routes/posts.js';
 
 const app = express();
@@ -12,12 +12,13 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
-const PORT = process.env.REACT_APP_PORT || 4000
 
-mongoose.connect("mongodb+srv://user-1:yJNIBmMSKmCvfKMx@cluster0.ofd5q.mongodb.net/mernDB?retryWrites=true&w=majority")
+const PORT = process.env.REACT_APP_PORT || 4000;
+
+mongoose.connect(process.env.REACT_APP_DB_URI)
 .then(() => app.listen(PORT, () => {
-  console.log(`server running on port ${PORT}`)
+  console.log(`connected to ${PORT}`)
 }))
 .catch((error) => {
-  console.log(error)
+  console.log(error.message)
 })
