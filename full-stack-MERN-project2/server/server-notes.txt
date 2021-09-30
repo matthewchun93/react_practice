@@ -6,3 +6,5 @@ npm install body-parser (enables post requests)
             dotenv
 
 npm install cors express mongoose nodemon dotenv    
+
+create proxy in package.json
