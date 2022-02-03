@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
 
-// components 
-import Post from './Post/Post.js';
+// styles
+import useStyles from "./styles.js";
+
+// components
+import Post from "./Post/Post.js";
 
 const Posts = () => {
+  const classes = useStyles();
+
   return (
     <>
       <h1>Posts</h1>
@@ -11,7 +16,7 @@ const Posts = () => {
       <Post />
       <Post />
     </>
-  )
+  );
 };
 
 export default Posts;

@@ -7,7 +7,7 @@ import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
 import memories from "./images/memories.png";
 
 // styles
-import useStyles from "./styles";
+import useStyles from "./styles.js";
 
 // components
 import Posts from "./components/Posts/Posts.js";
