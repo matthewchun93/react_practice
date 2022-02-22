@@ -10,6 +10,7 @@ const InputGroup = (props) => {
         id={props.name}
         onChange={(e) => props.setId(e.target.value)}
       >
+        {/* default value can be 1 also */}
         <option defaultValue>Choose...</option>
         {[...Array(props.total).keys()].map((episode) => {
           return (

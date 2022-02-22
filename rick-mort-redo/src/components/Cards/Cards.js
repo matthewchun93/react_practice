@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // styles
 import classes from "./Cards.module.scss";
@@ -32,7 +33,12 @@ const Cards = (props) => {
 
   if (props.results) {
     display = props.results.map((result) => (
-      <div className="col-4 mb-4 position-relative" key={result.id}>
+      <Link
+        style={{ textDecoration: "none" }}
+        to={`${props.page}${result.id}`}
+        className="col-4 mb-4 position-relative text-dark"
+        key={result.id}
+      >
         <div className={`${classes.cards}`}>
           <img
             src={result.image}
@@ -74,7 +80,7 @@ const Cards = (props) => {
             );
           }
         })()}
-      </div>
+      </Link>
     ));
   } else {
     display = "Characters not found";
