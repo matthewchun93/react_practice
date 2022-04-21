@@ -3,34 +3,34 @@ import Input from "../../UI/Input";
 import classes from "./MealItemForm.module.css";
 
 const MealItemForm = (props) => {
-  const [amountIsValid, setAmountIsValid] = useState(true);
+  const [qtyIsValid, setQtyIsValid] = useState(true);
 
-  const amountInputRef = useRef();
+  const qtyInputRef = useRef();
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const enteredAmount = amountInputRef.current.value;
-    const enteredAmountNum = +enteredAmount;
+    const enteredQty = qtyInputRef.current.value;
+    const enteredQtyNum = +enteredQty;
 
     if (
-      enteredAmount.trim().length === 0 ||
-      enteredAmountNum < 1 ||
-      enteredAmountNum > 5
+      enteredQty.trim().length === 0 ||
+      enteredQtyNum < 1 ||
+      enteredQtyNum > 5
     ) {
-      setAmountIsValid(false);
+      setQtyIsValid(false);
       return;
     }
 
-    props.onAddToCart(enteredAmountNum);
+    props.onAddToCart(enteredQtyNum);
   };
 
   return (
     <form className={classes.form} onSubmit={submitHandler}>
       <Input
-        ref={amountInputRef}
-        label="Amount"
+        ref={qtyInputRef}
+        label="Qty"
         input={{
-          id: "amount_" + props.id,
+          id: "qty_" + props.id,
           type: "number",
           min: "1",
           max: "5",
@@ -39,7 +39,7 @@ const MealItemForm = (props) => {
         }}
       />
       <button>+ Add</button>
-      {!amountIsValid && <p>Please enter a valid amount 1-5</p>}
+      {!qtyIsValid && <p>Please enter a valid qty 1-5</p>}
     </form>
   );
 };
